@@ -10,13 +10,13 @@ final class GameScreenTests: XCTestCase {
         var color = try sut.inspect().button().labelView().shape().foregroundColor()
         XCTAssertNotEqual(color, Color.orange, "Precondition")
         
-        let exp = sut.on(\.didAppear) { view in
+        let expectation = sut.on(\.didAppear) { view in
             try view.button().tap()
             
             color = try view.button().labelView().shape().foregroundColor()
-            XCTAssertEqual(color, Color.orange)
         }
         ViewHosting.host(view: sut)
-        wait(for: [exp], timeout: 0.1)
+        wait(for: [expectation], timeout: 0.01)
+        XCTAssertEqual(color, Color.orange)
     }
 }
