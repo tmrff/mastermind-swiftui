@@ -23,15 +23,6 @@
         "identifier" : "E9F131782C33EB30007C5190",
         "name" : "MastermindTests"
       }
-    },
-    {
-      "enabled" : false,
-      "parallelizable" : true,
-      "target" : {
-        "containerPath" : "container:Mastermind.xcodeproj",
-        "identifier" : "E9F131822C33EB30007C5190",
-        "name" : "MastermindUITests"
-      }
     }
   ],
   "version" : 1
