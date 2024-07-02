@@ -17,7 +17,6 @@
   },
   "testTargets" : [
     {
-      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:Mastermind.xcodeproj",
         "identifier" : "E9F131782C33EB30007C5190",
