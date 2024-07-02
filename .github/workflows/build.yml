@@ -1,0 +1,27 @@
+name: Build
+
+env:
+  DEVELOPER_DIR: /Applications/Xcode_15.2.app/Contents/Developer
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    
+concurrency:
+  # Cancel any in-progress workflows for this workflow/branch combination.
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build and test
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Show current version of Xcode
+      run: xcodebuild -version
+    - name: Run tests
+      run: ./run_tests.sh
