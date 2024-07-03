@@ -23,7 +23,7 @@ struct GameScreen: View {
     }
 }
 
-struct CodeChoiceView: View {
+private struct CodeChoiceView: View {
     var codePeg: CodePeg
     var id: String
     @Binding var guess: CodePeg?
