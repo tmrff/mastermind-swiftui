@@ -24,16 +24,24 @@ struct GameScreen: View {
         ZStack {
             backgroundColor.ignoresSafeArea()
             HStack {
-                Button(action: {}, label: {
-                    Circle()
-                        .foregroundColor(guess1?.color ?? unselectedColor)
-                        .frame(width: 100, height: 100)
-                })
-                .id("guess1")
+                CodeGuessView(guess: $guess1)
                 CodeChoiceView(codePeg: codePeg1, id: "color1", guess: $guess1)
             }
-            .onAppear { self.viewInspectorHook?(self) }
         }
+        .onAppear { self.viewInspectorHook?(self) }
+    }
+}
+
+private struct CodeGuessView: View {
+    @Binding var guess: CodePeg?
+    
+    var body: some View {
+        Button(action: {}, label: {
+            Circle()
+                .foregroundColor(guess?.color ?? unselectedColor)
+                .frame(width: 100, height: 100)
+        })
+        .id("guess1")
     }
 }
 
@@ -50,7 +58,8 @@ private struct CodeChoiceView: View {
                 .fill(Color.white)
                 .frame(width: 100, height: 100)
                 .overlay(
-                    Circle().foregroundColor(codePeg.color)
+                    Circle()
+                        .foregroundColor(codePeg.color)
                         .padding(10)
                 )
         })
