@@ -21,6 +21,7 @@ struct GameScreen: View {
             HStack {
                 Button(action: {}, label: {
                     Circle().foregroundColor(guess1?.color ?? .red)
+                        .frame(width: 100, height: 100)
                 })
                 .id("guess1")
                 CodeChoiceView(codePeg: codePeg1, id: "color1", guess: $guess1)
@@ -39,7 +40,13 @@ private struct CodeChoiceView: View {
         Button(action: {
             guess = codePeg
         }, label: {
-            Circle().foregroundColor(codePeg.color)
+            RoundedRectangle(cornerRadius: 10)
+                .fill(Color.white)
+                .frame(width: 100, height: 100)
+                .overlay(
+                    Circle().foregroundColor(codePeg.color)
+                        .padding(10)
+                )
         })
         .id(id)
     }
