@@ -13,7 +13,7 @@ final class GameScreenTests: XCTestCase {
     }
     
     private func getColorOfGuess<V: ViewInspector.KnownViewType>(_ view: InspectableView<V>) throws -> Color? {
-        try view.asInspectableView().button().labelView().shape().foregroundColor()
+        try view.asInspectableView().vStack()[0].button().labelView().shape().foregroundColor()
     }
     
     func test_tappingCircleTurnsItOrange() throws {
@@ -22,7 +22,7 @@ final class GameScreenTests: XCTestCase {
         XCTAssertNotEqual(color, Color.orange, "Precondition")
         
         display(&sut) { view in
-            try view.button().tap()
+            try view.vStack()[0].button().tap()
             color = try self.getColorOfGuess(view)
         }
         XCTAssertEqual(color, Color.orange)
