@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9EEF12D2C3626080084304A /* TestableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEF12C2C3626080084304A /* TestableView.swift */; };
+		E9EEF12F2C3626450084304A /* UpdateTestableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEF12E2C3626450084304A /* UpdateTestableView.swift */; };
 		E9F1316D2C33EB2F007C5190 /* MastermindApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F1316C2C33EB2F007C5190 /* MastermindApp.swift */; };
 		E9F1316F2C33EB2F007C5190 /* GameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F1316E2C33EB2F007C5190 /* GameScreen.swift */; };
 		E9F131712C33EB30007C5190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9F131702C33EB30007C5190 /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E9EEF12C2C3626080084304A /* TestableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestableView.swift; sourceTree = "<group>"; };
+		E9EEF12E2C3626450084304A /* UpdateTestableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTestableView.swift; sourceTree = "<group>"; };
 		E9F131692C33EB2F007C5190 /* Mastermind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mastermind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F1316C2C33EB2F007C5190 /* MastermindApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastermindApp.swift; sourceTree = "<group>"; };
 		E9F1316E2C33EB2F007C5190 /* GameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreen.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 				E9F1316E2C33EB2F007C5190 /* GameScreen.swift */,
 				E9F131702C33EB30007C5190 /* Assets.xcassets */,
 				E9F131722C33EB30007C5190 /* Preview Content */,
+				E9EEF12C2C3626080084304A /* TestableView.swift */,
 			);
 			path = Mastermind;
 			sourceTree = "<group>";
@@ -97,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				E9F1317D2C33EB30007C5190 /* GameScreenTests.swift */,
+				E9EEF12E2C3626450084304A /* UpdateTestableView.swift */,
 			);
 			path = MastermindTests;
 			sourceTree = "<group>";
@@ -207,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9EEF12D2C3626080084304A /* TestableView.swift in Sources */,
 				E9F1316F2C33EB2F007C5190 /* GameScreen.swift in Sources */,
 				E9F1316D2C33EB2F007C5190 /* MastermindApp.swift in Sources */,
 			);
@@ -217,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9F1317E2C33EB30007C5190 /* GameScreenTests.swift in Sources */,
+				E9EEF12F2C3626450084304A /* UpdateTestableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

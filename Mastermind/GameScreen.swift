@@ -8,7 +8,7 @@ struct CodeChoice {
 let codeChoice1 = CodeChoice(color: .blue, codeValue: 1)
 let codeChoices = [codeChoice1]
 
-struct GameScreen: View {
+struct GameScreen: TestableView {
     @State private var guess1: CodeChoice?
     var viewInspectorHook: ((Self) -> Void)?
     
