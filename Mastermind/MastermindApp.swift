@@ -4,7 +4,7 @@ import SwiftUI
 struct MastermindApp: App {
     var body: some Scene {
         WindowGroup {
-            GameScreen()
+            GameScreen(game: try! Game(numberOfCodeChoices: 1))
         }
     }
 }
