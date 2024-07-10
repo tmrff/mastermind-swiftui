@@ -14,12 +14,7 @@ struct GameScreen: TestableView {
             Color.background.ignoresSafeArea()
             HStack {
                 CodeGuessView(guess: $guess1)
-                VStack {
-                    ForEach(game.codeChoices.reversed(), id: \.codeValue) { codeChoice in
-                        CodeChoiceView(codePeg: codeChoice, id: codeChoice.codeValue, guess: $guess1)
-                    }
-                }
-                .id("codeChoices")
+                CodeChoicesView(game: $game, guess1: $guess1)
             }
         }
         .onAppear { self.viewInspectorHook?(self) }
@@ -43,6 +38,20 @@ private struct CodeGuessView: View {
         .id("guess1")
     }
 }
+
+private struct CodeChoicesView: View {
+     @Binding var game: Game
+     @Binding var guess1: CodeChoice?
+
+     var body: some View {
+         VStack {
+             ForEach(game.codeChoices.reversed(), id: \.codeValue) { codeChoice in
+                 CodeChoiceView(codePeg: codeChoice, id: codeChoice.codeValue, guess: $guess1)
+             }
+         }
+         .id("codeChoices")
+     }
+ }
 
 private struct CodeChoiceView: View {
     var codePeg: CodeChoice
