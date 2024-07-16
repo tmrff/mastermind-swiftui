@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E993B59C2C466A580088AE8E /* InspectableSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E993B59B2C466A580088AE8E /* InspectableSheet.swift */; };
 		E9EEF12D2C3626080084304A /* TestableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEF12C2C3626080084304A /* TestableView.swift */; };
 		E9EEF12F2C3626450084304A /* UpdateTestableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEF12E2C3626450084304A /* UpdateTestableView.swift */; };
 		E9EEF1312C362AE20084304A /* CodeChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEF1302C362AE20084304A /* CodeChoice.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E993B59B2C466A580088AE8E /* InspectableSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectableSheet.swift; sourceTree = "<group>"; };
 		E9EEF12C2C3626080084304A /* TestableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestableView.swift; sourceTree = "<group>"; };
 		E9EEF12E2C3626450084304A /* UpdateTestableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTestableView.swift; sourceTree = "<group>"; };
 		E9EEF1302C362AE20084304A /* CodeChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeChoice.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				E9F131722C33EB30007C5190 /* Preview Content */,
 				E9EEF12C2C3626080084304A /* TestableView.swift */,
 				E9EEF1302C362AE20084304A /* CodeChoice.swift */,
+				E993B59B2C466A580088AE8E /* InspectableSheet.swift */,
 			);
 			path = Mastermind;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9EEF12D2C3626080084304A /* TestableView.swift in Sources */,
+				E993B59C2C466A580088AE8E /* InspectableSheet.swift in Sources */,
 				E9EEF1312C362AE20084304A /* CodeChoice.swift in Sources */,
 				E9F1316F2C33EB2F007C5190 /* GameScreen.swift in Sources */,
 				E9F1316D2C33EB2F007C5190 /* MastermindApp.swift in Sources */,

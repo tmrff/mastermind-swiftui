@@ -4,6 +4,8 @@ import SwiftUI
 @testable import ViewInspector
 @testable import Mastermind
 
+extension InspectableSheet: PopupPresenter {}
+
 final class GameScreenTests: XCTestCase {
     
     @MainActor func test_displaysCodeChoicesBottomUp() throws {
@@ -39,6 +41,23 @@ final class GameScreenTests: XCTestCase {
             color = try self.getColorOfGuess(view)
         }
         XCTAssertEqual(color, codeChoice.color)
+    }
+    
+    @MainActor func test_doesNotShowGameOverWhenCodeChoiceIsEmpty() throws {
+        let game = try Game(numberOfCodeChoices: 2)
+        let sut = GameScreen(game: game)
+        XCTAssertThrowsError(try sut.inspect().find(ViewType.Sheet.self))
+    }
+    
+    @MainActor func test_showsGameOverWhenCodeChoiceIsFilled() throws {
+        let game = try Game(numberOfCodeChoices: 2)
+        var sut = GameScreen(game: game)
+        let codeChoice = game.codeChoices[0]
+        
+        inspectChangingView(&sut) { view in
+            try view.find(viewWithId: codeChoice.codeValue).button().tap()
+            XCTAssertNoThrow(try view.find(ViewType.Sheet.self))
+        }
     }
     
     private func getColorOfGuess<V: ViewInspector.KnownViewType>(_ view: InspectableView<V>) throws -> Color? {
