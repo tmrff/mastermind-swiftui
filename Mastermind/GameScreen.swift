@@ -17,7 +17,7 @@ struct GameScreen: TestableView {
             }
         }
         .inspectableSheet(isPresented: .constant(guess1 != nil)) {
-            Text("Boo")
+            Text("You lose!")
         }
         .onAppear { self.viewInspectorHook?(self) }
     }
