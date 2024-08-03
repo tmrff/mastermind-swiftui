@@ -17,7 +17,7 @@ final class SecretMakerTests: XCTestCase {
         XCTAssertEqual(result, codeChoices)
     }
     
-    func test_notNull() throws {
+    func test_containsAllCodeChoices() throws {
         let sut = SecretMaker()
         
         let result = sut.makeSecret(from: codeChoices)
@@ -29,7 +29,7 @@ final class SecretMakerTests: XCTestCase {
         )
     }
     
-    func test_notNull_notEqual() throws {
+    func test_shufflesCodeChoices() throws {
         let sut = SecretMaker()
         
         for _ in 0..<100 {
