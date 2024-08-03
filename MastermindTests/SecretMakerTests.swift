@@ -23,8 +23,10 @@ final class SecretMakerTests: XCTestCase {
         let result = sut.makeSecret(from: codeChoices)
         
         XCTAssertEqual(result.count, codeChoices.count)
-        XCTAssertTrue(result.contains(codeChoices[0]))
-        XCTAssertTrue(result.contains(codeChoices[1]))
+        XCTAssertTrue(
+            codeChoices.allSatisfy({ result.contains($0) }),
+            "Expected \(result.map(\.color)) to contain all elements of \(codeChoices.map(\.color))"
+        )
     }
     
     func test_notNull_notEqual() throws {
