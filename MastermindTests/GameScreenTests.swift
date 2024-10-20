@@ -95,6 +95,6 @@ final class GameScreenTests: XCTestCase {
     }
     
     private func getCodeChoiceColor<V: ViewInspector.KnownViewType>(_ view: InspectableView<V>, _ index: Int) throws -> Color? {
-        try view.asInspectableView().find(viewWithId: "codeChoices").vStack(0).forEach(0)[index].button().labelView().shape().overlay().shape().foregroundColor()
+        try view.asInspectableView().find(viewWithId: "codeChoices").vStack(0).forEach(0)[index].find(ViewType.Button.self).labelView().shape().overlay().shape().foregroundColor()
     }
 }
