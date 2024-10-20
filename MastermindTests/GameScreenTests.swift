@@ -4,6 +4,12 @@ import SwiftUI
 @testable import ViewInspector
 @testable import Mastermind
 
+extension Game {
+    fileprivate convenience init(numberOfCodeChoices: Int) throws {
+        try self.init(numberOfCodeChoices: numberOfCodeChoices, SecretMaker.createNull())
+    }
+}
+
 extension InspectableSheet: PopupPresenter {}
 
 final class GameScreenTests: XCTestCase {

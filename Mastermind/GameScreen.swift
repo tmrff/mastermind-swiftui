@@ -82,5 +82,5 @@ private struct CodeChoiceView: View {
 }
 
 #Preview {
-    GameScreen(game: try! Game(numberOfCodeChoices: 2))
+    GameScreen(game: try! Game(numberOfCodeChoices: 2, SecretMaker.createNull()))
 }
