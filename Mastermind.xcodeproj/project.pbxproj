@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78F7C59E2CC661D0004EAA28 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7C59D2CC661CE004EAA28 /* Game.swift */; };
 		E993B59C2C466A580088AE8E /* InspectableSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E993B59B2C466A580088AE8E /* InspectableSheet.swift */; };
 		E9BA3D512C5B32B3000E12B6 /* SecretMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3D502C5B32B3000E12B6 /* SecretMakerTests.swift */; };
 		E9BA3D532C5C80BE000E12B6 /* SecretMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3D522C5C80BE000E12B6 /* SecretMaker.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		78F7C59D2CC661CE004EAA28 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		E993B59B2C466A580088AE8E /* InspectableSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectableSheet.swift; sourceTree = "<group>"; };
 		E9BA3D502C5B32B3000E12B6 /* SecretMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretMakerTests.swift; sourceTree = "<group>"; };
 		E9BA3D522C5C80BE000E12B6 /* SecretMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretMaker.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				E9F131722C33EB30007C5190 /* Preview Content */,
 				E9EEF12C2C3626080084304A /* TestableView.swift */,
 				E9EEF1302C362AE20084304A /* CodeChoice.swift */,
+				78F7C59D2CC661CE004EAA28 /* Game.swift */,
 				E9BA3D522C5C80BE000E12B6 /* SecretMaker.swift */,
 				E993B59B2C466A580088AE8E /* InspectableSheet.swift */,
 			);
@@ -230,6 +233,7 @@
 			files = (
 				E9EEF12D2C3626080084304A /* TestableView.swift in Sources */,
 				E993B59C2C466A580088AE8E /* InspectableSheet.swift in Sources */,
+				78F7C59E2CC661D0004EAA28 /* Game.swift in Sources */,
 				E9EEF1312C362AE20084304A /* CodeChoice.swift in Sources */,
 				E9F1316F2C33EB2F007C5190 /* GameScreen.swift in Sources */,
 				E9BA3D532C5C80BE000E12B6 /* SecretMaker.swift in Sources */,
