@@ -19,7 +19,3 @@ final class Game {
         return secret == guess
     }
 }
-
-struct CodeChoices {
-    let options: [CodeChoice]
-}
