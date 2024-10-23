@@ -4,7 +4,7 @@ import XCTest
 final class CodeChoiceTests: XCTestCase {
     
     func test_generateOneCodeChoice() throws {
-        let result = try CodeChoiceGenerator.generate(from: [.red, .blue], take: 1)
+        let result = try CodeChoiceGenerator.generate2(from: [.red, .blue], take: 1).options
         XCTAssertEqual(result, [
             CodeChoice(color: .red, codeValue: 1),
         ])
@@ -12,7 +12,7 @@ final class CodeChoiceTests: XCTestCase {
     }
     
     func test_generateTwoCodeChoices() throws {
-        let result = try CodeChoiceGenerator.generate(from: [.red, .blue], take: 2)
+        let result = try CodeChoiceGenerator.generate2(from: [.red, .blue], take: 2).options
         XCTAssertEqual(result, [
             CodeChoice(color: .red, codeValue: 1),
             CodeChoice(color: .blue, codeValue: 2),
@@ -21,7 +21,7 @@ final class CodeChoiceTests: XCTestCase {
     
     func test_notEnoughColorsIsAnError() throws {
         XCTAssertThrowsError(
-            try CodeChoiceGenerator.generate(from: [.red, .blue], take: 3)
+            try CodeChoiceGenerator.generate2(from: [.red, .blue], take: 3).options
         )
     }
 }
