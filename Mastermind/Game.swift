@@ -2,7 +2,7 @@ import SwiftUI
 
 final class Game {
     let codeChoices: CodeChoices
-    var secret: [CodeChoice] = []
+    var secret = Secret(code: [])
     
     init(numberOfCodeChoices: Int, _ secretMaker: SecretMaker) throws {
         try codeChoices = CodeChoiceGenerator.generate(from: codeColors, take: numberOfCodeChoices)
@@ -17,6 +17,6 @@ final class Game {
     }
     
     func isGuessCorrect(_ guess: [CodeChoice]) -> Bool {
-        return secret == guess
+        return secret.code == guess
     }
 }
