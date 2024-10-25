@@ -83,6 +83,12 @@ private struct CodeChoiceView: View {
     }
 }
 
+private extension CodeChoices {
+    var lastToFirst: [CodeChoice] {
+        return options.reversed()
+    }
+}
+
 #Preview {
     GameScreen(game: try! Game(numberOfCodeChoices: 2, SecretMaker.createNull()))
 }
