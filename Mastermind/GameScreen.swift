@@ -7,6 +7,7 @@ struct GameScreen: TestableView {
     
     init(game: Game) {
         self.game = game
+        game.makeNewSecret()
     }
     
     var body: some View {
