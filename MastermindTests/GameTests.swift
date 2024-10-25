@@ -6,4 +6,10 @@ final class GameTests: XCTestCase {
         let game = try Game(numberOfCodeChoices: 2, SecretMaker.createNull())
         XCTAssertEqual(game.secret.code, [])
     }
+    
+    func test_makeNewSecret() throws {
+        let game = try Game(numberOfCodeChoices: 2, SecretMaker.createNull())
+        game.makeNewSecret()
+        XCTAssertEqual(game.secret.code, game.codeChoices.options)
+    }
 }
