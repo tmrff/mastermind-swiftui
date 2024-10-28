@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		78F7C59E2CC661D0004EAA28 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7C59D2CC661CE004EAA28 /* Game.swift */; };
 		78F7C6012CC7AA1A004EAA28 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7C6002CC7AA1A004EAA28 /* GameTests.swift */; };
+		78F7C6C32CCF7C33004EAA28 /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7C6C22CCF7C32004EAA28 /* Guess.swift */; };
+		78F7C6C52CCF7C67004EAA28 /* GuessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7C6C42CCF7C67004EAA28 /* GuessTests.swift */; };
 		E993B59C2C466A580088AE8E /* InspectableSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E993B59B2C466A580088AE8E /* InspectableSheet.swift */; };
 		E9BA3D512C5B32B3000E12B6 /* SecretMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3D502C5B32B3000E12B6 /* SecretMakerTests.swift */; };
 		E9BA3D532C5C80BE000E12B6 /* SecretMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3D522C5C80BE000E12B6 /* SecretMaker.swift */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		78F7C59D2CC661CE004EAA28 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		78F7C6002CC7AA1A004EAA28 /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
+		78F7C6C22CCF7C32004EAA28 /* Guess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess.swift; sourceTree = "<group>"; };
+		78F7C6C42CCF7C67004EAA28 /* GuessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTests.swift; sourceTree = "<group>"; };
 		E993B59B2C466A580088AE8E /* InspectableSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectableSheet.swift; sourceTree = "<group>"; };
 		E9BA3D502C5B32B3000E12B6 /* SecretMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretMakerTests.swift; sourceTree = "<group>"; };
 		E9BA3D522C5C80BE000E12B6 /* SecretMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretMaker.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				78F7C59D2CC661CE004EAA28 /* Game.swift */,
 				E9BA3D522C5C80BE000E12B6 /* SecretMaker.swift */,
 				E993B59B2C466A580088AE8E /* InspectableSheet.swift */,
+				78F7C6C22CCF7C32004EAA28 /* Guess.swift */,
 			);
 			path = Mastermind;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				E9F1317D2C33EB30007C5190 /* GameScreenTests.swift */,
+				78F7C6C42CCF7C67004EAA28 /* GuessTests.swift */,
 				78F7C6002CC7AA1A004EAA28 /* GameTests.swift */,
 				E9EEF12E2C3626450084304A /* UpdateTestableView.swift */,
 				E9EEF1322C362B670084304A /* CodeChoiceTests.swift */,
@@ -239,6 +245,7 @@
 				78F7C59E2CC661D0004EAA28 /* Game.swift in Sources */,
 				E9EEF1312C362AE20084304A /* CodeChoice.swift in Sources */,
 				E9F1316F2C33EB2F007C5190 /* GameScreen.swift in Sources */,
+				78F7C6C32CCF7C33004EAA28 /* Guess.swift in Sources */,
 				E9BA3D532C5C80BE000E12B6 /* SecretMaker.swift in Sources */,
 				E9F1316D2C33EB2F007C5190 /* MastermindApp.swift in Sources */,
 			);
@@ -253,6 +260,7 @@
 				E9BA3D512C5B32B3000E12B6 /* SecretMakerTests.swift in Sources */,
 				E9EEF12F2C3626450084304A /* UpdateTestableView.swift in Sources */,
 				78F7C6012CC7AA1A004EAA28 /* GameTests.swift in Sources */,
+				78F7C6C52CCF7C67004EAA28 /* GuessTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
