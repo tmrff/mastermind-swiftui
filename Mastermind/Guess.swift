@@ -2,6 +2,7 @@ import Foundation
 
 class Guess {
     private var code: [CodeChoice?]
+  
     init(secretSize: Int) {
         code = Array(repeating: nil, count: secretSize)
     }
