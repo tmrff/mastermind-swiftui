@@ -6,7 +6,7 @@ final class Game {
     let codeChoices: CodeChoices
     var secret = Secret(code: [])
     
-    init(numberOfCodeChoices: Int, secretSize: Int = 2, _ secretMaker: SecretMaker) throws {
+    init(numberOfCodeChoices: Int, secretSize: Int, _ secretMaker: SecretMaker) throws {
         self.secretMaker = secretMaker
         self.secretSize = secretSize
         try codeChoices = CodeChoiceGenerator.generate(from: codeColors, take: numberOfCodeChoices)
