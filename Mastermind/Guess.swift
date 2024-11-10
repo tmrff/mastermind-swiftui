@@ -7,6 +7,10 @@ class Guess {
         code = Array(repeating: nil, count: secretSize)
     }
     
+    var size: Int {
+        code.count
+    }
+    
     subscript(index: Int) -> CodeChoice? {
         get {
             return code[index]

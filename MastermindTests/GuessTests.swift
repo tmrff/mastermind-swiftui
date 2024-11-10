@@ -8,6 +8,11 @@ final class GuessTests: XCTestCase {
         XCTAssertEqual(sut[1], nil)
     }
     
+    func test_size() throws {
+        let sut = Guess(secretSize: 4)
+        XCTAssertEqual(sut.size, 4)
+    }
+    
     func test_setAndGetAtIndices() throws {
         let sut = Guess(secretSize: 2)
         let choice0 = CodeChoice(color: .red, codeValue: 1)
