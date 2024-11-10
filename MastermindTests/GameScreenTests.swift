@@ -69,8 +69,7 @@ final class GameScreenTests: XCTestCase {
     @MainActor func test_gameOverShowsYouLoseWhenGuessDoesNotMatchSecret_secretSize1() throws {
         let game = try makeGame(numberOfCodeChoices: 2, secretSize: 1)
         var sut = GameScreen(game: game)
-        game.secret = Secret(code: [game.codeChoice(1)])
-        let codeChoiceToTap = game.codeChoice(0)
+        let codeChoiceToTap = game.codeChoice(1)
         var gameOverText: String?
         
         inspectChangingView(&sut) { view in
@@ -84,8 +83,7 @@ final class GameScreenTests: XCTestCase {
     @MainActor func test_gameOverShowsYouWinWhenGuessMatchesSecret_secretSize1() throws {
         let game = try makeGame(numberOfCodeChoices: 2, secretSize: 1)
         var sut = GameScreen(game: game)
-        game.secret = Secret(code: [game.codeChoice(1)])
-        let codeChoiceToTap = game.secret.code[0]
+        let codeChoiceToTap = game.codeChoice(0)
         var gameOverText: String?
         
         inspectChangingView(&sut) { view in
