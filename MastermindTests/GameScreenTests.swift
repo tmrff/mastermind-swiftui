@@ -72,7 +72,7 @@ final class GameScreenTests: XCTestCase {
         }
     }
     
-    @MainActor func test_gameOverShowsYouLoseWhenGuessDoesNotMatchSecret() throws {
+    @MainActor func test_gameOverShowsYouLoseWhenGuessDoesNotMatchSecret_secretSize1() throws {
         let game = try Game(numberOfCodeChoices: 2)
         var sut = GameScreen(game: game)
         game.secret = Secret(code: [game.codeChoice(1)])
@@ -87,7 +87,7 @@ final class GameScreenTests: XCTestCase {
         XCTAssertEqual(gameOverText?.hasPrefix("You lose!"), true, "Text was \(String(describing: gameOverText))")
     }
     
-    @MainActor func test_gameOverShowsYouWinWhenGuessMatchesSecret() throws {
+    @MainActor func test_gameOverShowsYouWinWhenGuessMatchesSecret_secretSize1() throws {
         let game = try Game(numberOfCodeChoices: 2)
         var sut = GameScreen(game: game)
         game.secret = Secret(code: [game.codeChoice(1)])

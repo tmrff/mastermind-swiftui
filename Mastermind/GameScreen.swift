@@ -94,5 +94,5 @@ private extension CodeChoices {
 }
 
 #Preview {
-    GameScreen(game: try! Game(numberOfCodeChoices: 2, secretSize: 1, SecretMaker.createNull()))
+    GameScreen(game: try! Game(numberOfCodeChoices: 2, secretSize: 2, SecretMaker.createNull()))
 }
