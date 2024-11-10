@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7848924F2CE0AF5600318750 /* SecretTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7848924E2CE0AF4E00318750 /* SecretTests.swift */; };
 		78F7C59E2CC661D0004EAA28 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7C59D2CC661CE004EAA28 /* Game.swift */; };
 		78F7C6012CC7AA1A004EAA28 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7C6002CC7AA1A004EAA28 /* GameTests.swift */; };
 		78F7C6C32CCF7C33004EAA28 /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7C6C22CCF7C32004EAA28 /* Guess.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7848924E2CE0AF4E00318750 /* SecretTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretTests.swift; sourceTree = "<group>"; };
 		78F7C59D2CC661CE004EAA28 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		78F7C6002CC7AA1A004EAA28 /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
 		78F7C6C22CCF7C32004EAA28 /* Guess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		E9F1317C2C33EB30007C5190 /* MastermindTests */ = {
 			isa = PBXGroup;
 			children = (
+				7848924E2CE0AF4E00318750 /* SecretTests.swift */,
 				E9EEF1322C362B670084304A /* CodeChoiceTests.swift */,
 				E9F1317D2C33EB30007C5190 /* GameScreenTests.swift */,
 				78F7C6002CC7AA1A004EAA28 /* GameTests.swift */,
@@ -260,6 +263,7 @@
 				E9BA3D512C5B32B3000E12B6 /* SecretMakerTests.swift in Sources */,
 				E9EEF12F2C3626450084304A /* UpdateTestableView.swift in Sources */,
 				78F7C6012CC7AA1A004EAA28 /* GameTests.swift in Sources */,
+				7848924F2CE0AF5600318750 /* SecretTests.swift in Sources */,
 				78F7C6C52CCF7C67004EAA28 /* GuessTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
