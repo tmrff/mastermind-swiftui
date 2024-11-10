@@ -10,7 +10,7 @@ extension Game {
     }
 }
 
-extension InspectableSheet: PopupPresenter {}
+extension InspectableSheet: @retroactive PopupPresenter {}
 
 final class GameScreenTests: XCTestCase {
     
