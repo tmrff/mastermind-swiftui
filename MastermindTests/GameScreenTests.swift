@@ -4,18 +4,12 @@ import SwiftUI
 @testable import ViewInspector
 @testable import Mastermind
 
-extension Game {
-    fileprivate convenience init(numberOfCodeChoices: Int, secretSize: Int) throws {
-        try self.init(numberOfCodeChoices: numberOfCodeChoices, secretSize: secretSize, SecretMaker.createNull())
-    }
-}
-
 extension InspectableSheet: @retroactive PopupPresenter {}
 
 final class GameScreenTests: XCTestCase {
     
     @MainActor func test_displaysCodeChoicesBottomUp() throws {
-        let game = try Game(numberOfCodeChoices: 2, secretSize: 1)
+        let game = try makeGame(numberOfCodeChoices: 2, secretSize: 1)
         let sut = GameScreen(game: game)
         
         let choice1 = try getCodeChoiceColor(sut.inspect(), 0)
@@ -26,14 +20,14 @@ final class GameScreenTests: XCTestCase {
     }
     
     @MainActor func test_showingGameScreen_setsGameSecret() throws {
-        let game = try Game(numberOfCodeChoices: 2, secretSize: 1)
+        let game = try makeGame(numberOfCodeChoices: 2, secretSize: 1)
         _ = GameScreen(game: game)
         XCTAssertFalse(game.secret.code.isEmpty)
     }
     
     @MainActor
     func test_initialColorGuessIsUnselected() throws {
-        let game = try Game(numberOfCodeChoices: 2, secretSize: 1)
+        let game = try makeGame(numberOfCodeChoices: 2, secretSize: 1)
         let sut = GameScreen(game: game)
         
         let color = try getColorOfGuess(try sut.inspect())
@@ -43,7 +37,7 @@ final class GameScreenTests: XCTestCase {
     
     @MainActor
     func test_tappingCodeChoiceSetsGuessColor() throws {
-        let game = try Game(numberOfCodeChoices: 2, secretSize: 1)
+        let game = try makeGame(numberOfCodeChoices: 2, secretSize: 1)
         var sut = GameScreen(game: game)
         let codeChoice = game.codeChoice(0)
         var color: Color?
@@ -56,13 +50,13 @@ final class GameScreenTests: XCTestCase {
     }
     
     @MainActor func test_doesNotShowGameOverWhenCodeChoiceIsEmpty() throws {
-        let game = try Game(numberOfCodeChoices: 2, secretSize: 1)
+        let game = try makeGame(numberOfCodeChoices: 2, secretSize: 1)
         let sut = GameScreen(game: game)
         XCTAssertThrowsError(try sut.inspect().find(ViewType.Sheet.self))
     }
     
     @MainActor func test_showsGameOverWhenCodeChoiceIsFilled() throws {
-        let game = try Game(numberOfCodeChoices: 2, secretSize: 1)
+        let game = try makeGame(numberOfCodeChoices: 2, secretSize: 1)
         var sut = GameScreen(game: game)
         let codeChoice = game.codeChoice(0)
         
@@ -73,7 +67,7 @@ final class GameScreenTests: XCTestCase {
     }
     
     @MainActor func test_gameOverShowsYouLoseWhenGuessDoesNotMatchSecret_secretSize1() throws {
-        let game = try Game(numberOfCodeChoices: 2, secretSize: 1)
+        let game = try makeGame(numberOfCodeChoices: 2, secretSize: 1)
         var sut = GameScreen(game: game)
         game.secret = Secret(code: [game.codeChoice(1)])
         let codeChoiceToTap = game.codeChoice(0)
@@ -88,7 +82,7 @@ final class GameScreenTests: XCTestCase {
     }
     
     @MainActor func test_gameOverShowsYouWinWhenGuessMatchesSecret_secretSize1() throws {
-        let game = try Game(numberOfCodeChoices: 2, secretSize: 1)
+        let game = try makeGame(numberOfCodeChoices: 2, secretSize: 1)
         var sut = GameScreen(game: game)
         game.secret = Secret(code: [game.codeChoice(1)])
         let codeChoiceToTap = game.secret.code[0]
@@ -100,6 +94,10 @@ final class GameScreenTests: XCTestCase {
         }
         
         XCTAssertEqual(gameOverText, "You win!")
+    }
+    
+    private func makeGame(numberOfCodeChoices: Int, secretSize: Int) throws -> Game {
+        try Game(numberOfCodeChoices: numberOfCodeChoices, secretSize: secretSize, SecretMaker.createNull())
     }
     
     private func getColorOfGuess<V: ViewInspector.KnownViewType>(_ view: InspectableView<V>) throws -> Color? {
