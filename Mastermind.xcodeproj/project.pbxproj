@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7848924F2CE0AF5600318750 /* SecretTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7848924E2CE0AF4E00318750 /* SecretTests.swift */; };
+		784892C02CE204CB00318750 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784892BF2CE204CB00318750 /* Secret.swift */; };
 		78F7C59E2CC661D0004EAA28 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7C59D2CC661CE004EAA28 /* Game.swift */; };
 		78F7C6012CC7AA1A004EAA28 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7C6002CC7AA1A004EAA28 /* GameTests.swift */; };
 		78F7C6C32CCF7C33004EAA28 /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7C6C22CCF7C32004EAA28 /* Guess.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		7848924E2CE0AF4E00318750 /* SecretTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretTests.swift; sourceTree = "<group>"; };
+		784892BF2CE204CB00318750 /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		78F7C59D2CC661CE004EAA28 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		78F7C6002CC7AA1A004EAA28 /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
 		78F7C6C22CCF7C32004EAA28 /* Guess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				E993B59B2C466A580088AE8E /* InspectableSheet.swift */,
 				E9F1316C2C33EB2F007C5190 /* MastermindApp.swift */,
 				E9F131722C33EB30007C5190 /* Preview Content */,
+				784892BF2CE204CB00318750 /* Secret.swift */,
 				E9BA3D522C5C80BE000E12B6 /* SecretMaker.swift */,
 				E9EEF12C2C3626080084304A /* TestableView.swift */,
 			);
@@ -250,6 +253,7 @@
 				E9F1316F2C33EB2F007C5190 /* GameScreen.swift in Sources */,
 				78F7C6C32CCF7C33004EAA28 /* Guess.swift in Sources */,
 				E9BA3D532C5C80BE000E12B6 /* SecretMaker.swift in Sources */,
+				784892C02CE204CB00318750 /* Secret.swift in Sources */,
 				E9F1316D2C33EB2F007C5190 /* MastermindApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
