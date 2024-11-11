@@ -37,4 +37,12 @@ final class SecretTests: XCTestCase {
         
         XCTAssertFalse(secret.matches(guess))
     }
+    
+    func test_secretDoesNotMatchGuessOfDifferentSize() throws {
+        let secret = Secret(code: [red, green])
+        let guess = Guess(secretSize: 1)
+        guess[0] = red
+        
+        XCTAssertFalse(secret.matches(guess))
+    }
 }
