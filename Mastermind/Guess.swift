@@ -14,7 +14,7 @@ class Guess {
     }
     
     var isComplete: Bool {
-        !code.contains(where: { $0 == nil })
+        !code.contains { $0 == nil }
     }
     
     subscript(index: Int) -> CodeChoice? {
