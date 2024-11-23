@@ -47,6 +47,13 @@ final class GuessTests: XCTestCase {
         XCTAssertFalse(sut.isComplete)
     }
     
+    func test_isComplete_withAllSlotsFilled() throws {
+        let sut = makeSUT(secretSize: 2)
+        sut[0] = choice0
+        sut[1] = choice1
+        XCTAssertTrue(sut.isComplete)
+    }
+    
     private func makeSUT(secretSize: Int) -> Guess {
         Guess(secretSize: secretSize)
     }

@@ -14,7 +14,7 @@ class Guess {
     }
     
     var isComplete: Bool {
-        false
+        code[1] != nil
     }
     
     subscript(index: Int) -> CodeChoice? {
