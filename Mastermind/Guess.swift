@@ -13,6 +13,10 @@ class Guess {
         code.count
     }
     
+    var isComplete: Bool {
+        false
+    }
+    
     subscript(index: Int) -> CodeChoice? {
         get {
             return code[index]
