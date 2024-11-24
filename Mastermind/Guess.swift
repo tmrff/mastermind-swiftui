@@ -25,4 +25,9 @@ class Guess {
             code[index] = newValue
         }
     }
+    
+    func placeCodeChoiceInFirstEmptySlot(_ choice: CodeChoice) {
+        guard let index = code.firstIndex(of: nil) else { return }
+        code[index] = choice
+    }
 }
