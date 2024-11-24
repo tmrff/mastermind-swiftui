@@ -18,18 +18,18 @@ final class GuessTests: XCTestCase {
     }
     
     func test_createGuess_setsGuessSize() throws {
-        let sut = makeSUT(secretSize: 2)
+        let sut = makeGuess(secretSize: 2)
         XCTAssertEqual(sut[0], nil)
         XCTAssertEqual(sut[1], nil)
     }
     
     func test_size() throws {
-        let sut = makeSUT(secretSize: 4)
+        let sut = makeGuess(secretSize: 4)
         XCTAssertEqual(sut.size, 4)
     }
     
     func test_setAndGetAtIndices() throws {
-        let sut = makeSUT(secretSize: 2)
+        let sut = makeGuess(secretSize: 2)
         sut[0] = choice0
         sut[1] = choice1
         XCTAssertEqual(sut[0], choice0)
@@ -37,7 +37,7 @@ final class GuessTests: XCTestCase {
     }
     
     func test_placeCodeChoiceInFirstEmptySlot() throws {
-        let sut = makeSUT(secretSize: 2)
+        let sut = makeGuess(secretSize: 2)
         sut.placeCodeChoiceInFirstEmptySlot(choice0)
         sut.placeCodeChoiceInFirstEmptySlot(choice1)
         XCTAssertEqual(sut[0], choice0)
@@ -45,30 +45,30 @@ final class GuessTests: XCTestCase {
     }
     
     func test_isObservable_soThatViewsCanObserveChanges() throws {
-        let sut = makeSUT(secretSize: 2)
+        let sut = makeGuess(secretSize: 2)
         XCTAssertTrue(sut is Observable)
     }
     
     func test_isNotComplete_withSecondSlotEmpty() throws {
-        let sut = makeSUT(secretSize: 2)
+        let sut = makeGuess(secretSize: 2)
         sut[0] = choice0
         XCTAssertFalse(sut.isComplete)
     }
     
     func test_isNotComplete_withFirstSlotEmpty() throws {
-        let sut = makeSUT(secretSize: 2)
+        let sut = makeGuess(secretSize: 2)
         sut[1] = choice1
         XCTAssertFalse(sut.isComplete)
     }
     
     func test_isComplete_withAllSlotsFilled() throws {
-        let sut = makeSUT(secretSize: 2)
+        let sut = makeGuess(secretSize: 2)
         sut[0] = choice0
         sut[1] = choice1
         XCTAssertTrue(sut.isComplete)
     }
     
-    private func makeSUT(secretSize: Int) -> Guess {
+    private func makeGuess(secretSize: Int) -> Guess {
         Guess(secretSize: secretSize)
     }
 }
