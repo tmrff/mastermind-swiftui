@@ -113,7 +113,6 @@ final class GameScreenTests: XCTestCase {
     }
     
     @MainActor func test_gameOverShowsYouWinWhenGuessMatchesSecret_secretSize2() throws {
-        try XCTSkipIf(true, "Disabled")
         let game = try makeGame(numberOfCodeChoices: 2, secretSize: 2)
         var sut = GameScreen(game: game)
         let firstCodeChoice = game.codeChoice(0)
