@@ -19,8 +19,8 @@ final class GuessTests: XCTestCase {
     
     func test_createGuess_setsGuessSize() throws {
         let sut = makeGuess(secretSize: 2)
-        XCTAssertEqual(sut[0], nil)
-        XCTAssertEqual(sut[1], nil)
+        XCTAssertNil(sut[0])
+        XCTAssertNil(sut[1])
     }
     
     func test_size() throws {
