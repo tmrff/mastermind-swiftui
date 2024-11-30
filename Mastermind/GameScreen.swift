@@ -42,7 +42,7 @@ private struct CodeGuessView: View {
                             Circle()
                                 .strokeBorder(Color.unselected, lineWidth: 2)
                         )
-                        .foregroundColor(guess[0]?.color ?? Color.unselected)
+                        .foregroundColor(guess[index]?.color ?? Color.unselected)
                         .frame(width: 100, height: 100)
                 })
                 .id("guess\(index + 1)")
