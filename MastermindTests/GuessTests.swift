@@ -28,7 +28,7 @@ final class GuessTests: XCTestCase {
         XCTAssertEqual(sut.size, 4)
     }
     
-    func test_placeCodeChoiceInFirstEmptySlot() throws {
+    func test_placeChoiceInNextSlot() throws {
         let sut = makeGuess(secretSize: 2)
         sut.placeChoiceInNextSlot(choice0)
         sut.placeChoiceInNextSlot(choice1)
