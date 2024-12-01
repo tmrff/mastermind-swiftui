@@ -63,7 +63,7 @@ final class GameScreenTests: XCTestCase {
         }
     }
     
-    @MainActor func test_doesNotShowGameOverWhenGuessIsNotFilled_secretSize2() throws {
+    @MainActor func test_doesNotShowGameOverWhenGuessIsNotFilled() throws {
         let game = try makeGame(numberOfCodeChoices: 2, secretSize: 2)
         var sut = GameScreen(game: game)
         let firstCodeChoice = game.codeChoice(0)
@@ -73,7 +73,7 @@ final class GameScreenTests: XCTestCase {
         }
     }
     
-    @MainActor func test_gameOverShowsYouWinWhenGuessMatchesSecret_secretSize2() throws {
+    @MainActor func test_showsYouWinWhenGuessMatchesSecret() throws {
         let game = try makeGame(numberOfCodeChoices: 2, secretSize: 2)
         var sut = GameScreen(game: game)
         let firstCodeChoice = game.codeChoice(0)
@@ -87,7 +87,7 @@ final class GameScreenTests: XCTestCase {
         XCTAssertEqual(gameOverText, "You win!")
     }
     
-    @MainActor func test_gameOverShowsYouLoseWhenGuessDoesNotMatchSecret_secretSize2() throws {
+    @MainActor func test_showsYouLoseWhenGuessDoesNotMatchSecret() throws {
         let game = try makeGame(numberOfCodeChoices: 2, secretSize: 2)
         var sut = GameScreen(game: game)
         let firstCodeChoice = game.codeChoice(0)
