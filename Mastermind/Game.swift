@@ -6,7 +6,7 @@ final class Game {
     let secretSize: Int
     let codeChoices: CodeChoices
     var secret = Secret(code: [])
-    let guess: Guess
+    var guess: Guess
     
     init(numberOfCodeChoices: Int, secretSize: Int, _ secretMaker: SecretMaker) throws {
         self.secretMaker = secretMaker
