@@ -16,7 +16,7 @@ struct GameScreen: TestableView {
                 CodeChoicesView(game: $game)
             }
         }
-        .inspectableSheet(isPresented: .constant(game.guess.isComplete)) {
+        .inspectableSheet(isPresented: .constant(game.isComplete)) {
             if game.secret.matches(game.guess) {
                 Text("You win!")
             } else {
