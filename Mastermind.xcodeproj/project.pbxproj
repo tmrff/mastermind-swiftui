@@ -3,27 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7848924F2CE0AF5600318750 /* SecretTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7848924E2CE0AF4E00318750 /* SecretTests.swift */; };
-		784892C02CE204CB00318750 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784892BF2CE204CB00318750 /* Secret.swift */; };
-		78F7C59E2CC661D0004EAA28 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7C59D2CC661CE004EAA28 /* Game.swift */; };
 		78F7C6012CC7AA1A004EAA28 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7C6002CC7AA1A004EAA28 /* GameTests.swift */; };
-		78F7C6C32CCF7C33004EAA28 /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7C6C22CCF7C32004EAA28 /* Guess.swift */; };
 		78F7C6C52CCF7C67004EAA28 /* GuessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7C6C42CCF7C67004EAA28 /* GuessTests.swift */; };
-		E993B59C2C466A580088AE8E /* InspectableSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E993B59B2C466A580088AE8E /* InspectableSheet.swift */; };
 		E9BA3D512C5B32B3000E12B6 /* SecretMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3D502C5B32B3000E12B6 /* SecretMakerTests.swift */; };
-		E9BA3D532C5C80BE000E12B6 /* SecretMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3D522C5C80BE000E12B6 /* SecretMaker.swift */; };
-		E9EEF12D2C3626080084304A /* TestableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEF12C2C3626080084304A /* TestableView.swift */; };
 		E9EEF12F2C3626450084304A /* UpdateTestableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEF12E2C3626450084304A /* UpdateTestableView.swift */; };
-		E9EEF1312C362AE20084304A /* CodeChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEF1302C362AE20084304A /* CodeChoice.swift */; };
 		E9EEF1332C362B670084304A /* CodeChoiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEF1322C362B670084304A /* CodeChoiceTests.swift */; };
-		E9F1316D2C33EB2F007C5190 /* MastermindApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F1316C2C33EB2F007C5190 /* MastermindApp.swift */; };
-		E9F1316F2C33EB2F007C5190 /* GameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F1316E2C33EB2F007C5190 /* GameScreen.swift */; };
-		E9F131712C33EB30007C5190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9F131702C33EB30007C5190 /* Assets.xcassets */; };
-		E9F131742C33EB30007C5190 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9F131732C33EB30007C5190 /* Preview Assets.xcassets */; };
 		E9F1317E2C33EB30007C5190 /* GameScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F1317D2C33EB30007C5190 /* GameScreenTests.swift */; };
 		E9F349FE2C33F1D600333499 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = E9F349FD2C33F1D600333499 /* ViewInspector */; };
 /* End PBXBuildFile section */
@@ -40,27 +29,20 @@
 
 /* Begin PBXFileReference section */
 		7848924E2CE0AF4E00318750 /* SecretTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretTests.swift; sourceTree = "<group>"; };
-		784892BF2CE204CB00318750 /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
-		78F7C59D2CC661CE004EAA28 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		78F7C6002CC7AA1A004EAA28 /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
-		78F7C6C22CCF7C32004EAA28 /* Guess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess.swift; sourceTree = "<group>"; };
 		78F7C6C42CCF7C67004EAA28 /* GuessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTests.swift; sourceTree = "<group>"; };
-		E993B59B2C466A580088AE8E /* InspectableSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectableSheet.swift; sourceTree = "<group>"; };
 		E9BA3D502C5B32B3000E12B6 /* SecretMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretMakerTests.swift; sourceTree = "<group>"; };
-		E9BA3D522C5C80BE000E12B6 /* SecretMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretMaker.swift; sourceTree = "<group>"; };
-		E9EEF12C2C3626080084304A /* TestableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestableView.swift; sourceTree = "<group>"; };
 		E9EEF12E2C3626450084304A /* UpdateTestableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTestableView.swift; sourceTree = "<group>"; };
-		E9EEF1302C362AE20084304A /* CodeChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeChoice.swift; sourceTree = "<group>"; };
 		E9EEF1322C362B670084304A /* CodeChoiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeChoiceTests.swift; sourceTree = "<group>"; };
 		E9F131692C33EB2F007C5190 /* Mastermind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mastermind.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9F1316C2C33EB2F007C5190 /* MastermindApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastermindApp.swift; sourceTree = "<group>"; };
-		E9F1316E2C33EB2F007C5190 /* GameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreen.swift; sourceTree = "<group>"; };
-		E9F131702C33EB30007C5190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E9F131732C33EB30007C5190 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E9F131792C33EB30007C5190 /* MastermindTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MastermindTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F1317D2C33EB30007C5190 /* GameScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreenTests.swift; sourceTree = "<group>"; };
 		E9F349FA2C33ED7700333499 /* MastermindTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MastermindTests.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		7879E02E2D043E440050A83E /* Mastermind */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Mastermind; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E9F131662C33EB2F007C5190 /* Frameworks */ = {
@@ -85,7 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				E9F349FA2C33ED7700333499 /* MastermindTests.xctestplan */,
-				E9F1316B2C33EB2F007C5190 /* Mastermind */,
+				7879E02E2D043E440050A83E /* Mastermind */,
 				E9F1317C2C33EB30007C5190 /* MastermindTests */,
 				E9F1316A2C33EB2F007C5190 /* Products */,
 			);
@@ -98,32 +80,6 @@
 				E9F131792C33EB30007C5190 /* MastermindTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		E9F1316B2C33EB2F007C5190 /* Mastermind */ = {
-			isa = PBXGroup;
-			children = (
-				E9F131702C33EB30007C5190 /* Assets.xcassets */,
-				E9EEF1302C362AE20084304A /* CodeChoice.swift */,
-				78F7C59D2CC661CE004EAA28 /* Game.swift */,
-				E9F1316E2C33EB2F007C5190 /* GameScreen.swift */,
-				78F7C6C22CCF7C32004EAA28 /* Guess.swift */,
-				E993B59B2C466A580088AE8E /* InspectableSheet.swift */,
-				E9F1316C2C33EB2F007C5190 /* MastermindApp.swift */,
-				E9F131722C33EB30007C5190 /* Preview Content */,
-				784892BF2CE204CB00318750 /* Secret.swift */,
-				E9BA3D522C5C80BE000E12B6 /* SecretMaker.swift */,
-				E9EEF12C2C3626080084304A /* TestableView.swift */,
-			);
-			path = Mastermind;
-			sourceTree = "<group>";
-		};
-		E9F131722C33EB30007C5190 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				E9F131732C33EB30007C5190 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		E9F1317C2C33EB30007C5190 /* MastermindTests */ = {
@@ -154,6 +110,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				7879E02E2D043E440050A83E /* Mastermind */,
 			);
 			name = Mastermind;
 			productName = Mastermind;
@@ -227,8 +186,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9F131742C33EB30007C5190 /* Preview Assets.xcassets in Resources */,
-				E9F131712C33EB30007C5190 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,15 +203,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9EEF12D2C3626080084304A /* TestableView.swift in Sources */,
-				E993B59C2C466A580088AE8E /* InspectableSheet.swift in Sources */,
-				78F7C59E2CC661D0004EAA28 /* Game.swift in Sources */,
-				E9EEF1312C362AE20084304A /* CodeChoice.swift in Sources */,
-				E9F1316F2C33EB2F007C5190 /* GameScreen.swift in Sources */,
-				78F7C6C32CCF7C33004EAA28 /* Guess.swift in Sources */,
-				E9BA3D532C5C80BE000E12B6 /* SecretMaker.swift in Sources */,
-				784892C02CE204CB00318750 /* Secret.swift in Sources */,
-				E9F1316D2C33EB2F007C5190 /* MastermindApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +411,6 @@
 		E9F131912C33EB30007C5190 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -483,7 +430,6 @@
 		E9F131922C33EB30007C5190 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
