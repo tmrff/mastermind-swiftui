@@ -35,6 +35,8 @@
 				Domain/Tests/GuessTests.swift,
 				Domain/Tests/SecretMakerTests.swift,
 				Domain/Tests/SecretTests.swift,
+				UI/Tests/GameScreenTests.swift,
+				UI/Tests/UpdateTestableView.swift,
 			);
 			target = E9F131682C33EB2F007C5190 /* Mastermind */;
 		};
@@ -46,6 +48,8 @@
 				Domain/Tests/GuessTests.swift,
 				Domain/Tests/SecretMakerTests.swift,
 				Domain/Tests/SecretTests.swift,
+				UI/Tests/GameScreenTests.swift,
+				UI/Tests/UpdateTestableView.swift,
 			);
 			target = E9F131782C33EB30007C5190 /* MastermindTests */;
 		};
@@ -53,7 +57,6 @@
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		7879E02E2D043E440050A83E /* Mastermind */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (7879E04C2D0442060050A83E /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 7879E04D2D0442060050A83E /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Mastermind; sourceTree = "<group>"; };
-		7879E0412D043EE10050A83E /* MastermindTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = MastermindTests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +83,6 @@
 			children = (
 				E9F349FA2C33ED7700333499 /* MastermindTests.xctestplan */,
 				7879E02E2D043E440050A83E /* Mastermind */,
-				7879E0412D043EE10050A83E /* MastermindTests */,
 				E9F1316A2C33EB2F007C5190 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -129,9 +131,6 @@
 			);
 			dependencies = (
 				E9F1317B2C33EB30007C5190 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				7879E0412D043EE10050A83E /* MastermindTests */,
 			);
 			name = MastermindTests;
 			packageProductDependencies = (
