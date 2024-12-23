@@ -31,6 +31,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Domain/Tests/CodeChoiceTests.swift,
+				Domain/Tests/FeedbackTests.swift,
 				Domain/Tests/GameTests.swift,
 				Domain/Tests/GuessTests.swift,
 				Domain/Tests/SecretMakerTests.swift,
@@ -44,6 +45,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Domain/Tests/CodeChoiceTests.swift,
+				Domain/Tests/FeedbackTests.swift,
 				Domain/Tests/GameTests.swift,
 				Domain/Tests/GuessTests.swift,
 				Domain/Tests/SecretMakerTests.swift,
