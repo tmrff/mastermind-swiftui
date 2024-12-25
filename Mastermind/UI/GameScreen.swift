@@ -15,19 +15,7 @@ struct GameScreen: TestableView {
                 CodeGuessView(guess: $game.guess)
                 VStack {
                     CodeChoicesView(game: $game)
-                    Button(action: {
-                    }, label: {
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(Color.blue)
-                            .frame(width: 100, height: 200)
-                            .overlay(
-                                Text("Check")
-                                    .foregroundColor(.white)
-                                    .font(.title)
-                            )
-                    })
-                    .tag("checkButton")
-                    .disabled(true)
+                    CheckButton()
                 }
             }
         }
@@ -102,6 +90,24 @@ private struct CodeChoiceView: View {
 private extension CodeChoices {
     var lastToFirst: [CodeChoice] {
         return options.reversed()
+    }
+}
+
+struct CheckButton: View {
+    var body: some View {
+        Button(action: {
+        }, label: {
+            RoundedRectangle(cornerRadius: 10)
+                .fill(Color.blue)
+                .frame(width: 100, height: 200)
+                .overlay(
+                    Text("Check")
+                        .foregroundColor(.white)
+                        .font(.title)
+                )
+        })
+        .tag("checkButton")
+        .disabled(true)
     }
 }
 
