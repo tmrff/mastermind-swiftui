@@ -52,15 +52,26 @@ private struct CodeGuessView: View {
 private struct CodeChoicesView: View {
      @Binding var game: Game
 
-     var body: some View {
-         VStack {
-             ForEach(game.codeChoices.lastToFirst, id: \.codeValue) { codeChoice in
-                 CodeChoiceView(codePeg: codeChoice, codeChoiceId: codeChoice.codeValue, guess: $game.guess)
-             }
-         }
-         .id("codeChoices")
-     }
- }
+    var body: some View {
+        VStack {
+            ForEach(game.codeChoices.lastToFirst, id: \.codeValue) { codeChoice in
+                CodeChoiceView(codePeg: codeChoice, codeChoiceId: codeChoice.codeValue, guess: $game.guess)
+            }
+            Button(action: {
+            }, label: {
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.blue)
+                    .frame(width: 100, height: 200)
+                    .overlay(
+                        Text("Check")
+                            .foregroundColor(.white)
+                            .font(.title)
+                    )
+            })
+        }
+        .id("codeChoices")
+    }
+}
 
 private struct CodeChoiceView: View {
     var codePeg: CodeChoice
