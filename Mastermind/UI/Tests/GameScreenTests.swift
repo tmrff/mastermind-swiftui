@@ -55,7 +55,7 @@ final class GameScreenTests: XCTestCase {
     func test_checkButtonIsInitiallyDisabled() throws {
         let game = try makeGame(numberOfCodeChoices: 2, secretSize: 2)
         let sut = GameScreen(game: game)
-        let isEnabled = try sut.inspect().find(viewWithTag: "checkButton").button().isResponsive()
+        let isEnabled = try sut.inspect().find(viewWithAccessibilityIdentifier: "checkButton").button().isResponsive()
         XCTAssertFalse(isEnabled)
     }
     
@@ -68,7 +68,7 @@ final class GameScreenTests: XCTestCase {
         inspectChangingView(&sut) { view in
             try view.find(viewWithId: codeChoice1.codeValue).button().tap()
             try view.find(viewWithId: codeChoice2.codeValue).button().tap()
-            isEnabled = try view.find(viewWithTag: "checkButton").button().isResponsive()
+            isEnabled = try view.find(viewWithAccessibilityIdentifier: "checkButton").button().isResponsive()
         }
         XCTAssertTrue(isEnabled)
     }
