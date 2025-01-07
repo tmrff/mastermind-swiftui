@@ -37,6 +37,7 @@
 				Domain/Tests/GuessTests.swift,
 				Domain/Tests/SecretMakerTests.swift,
 				Domain/Tests/SecretTests.swift,
+				UI/Tests/__Snapshots__/CheckButtonSnapshotTests/disabledColor.1.png,
 				UI/Tests/__Snapshots__/CheckButtonSnapshotTests/enabledColor.1.png,
 				UI/Tests/CheckButtonSnapshotTests.swift,
 				UI/Tests/GameScreenTests.swift,
