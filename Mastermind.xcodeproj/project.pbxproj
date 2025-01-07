@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7814F2E52D2CE3FE00B1F061 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 7814F2E42D2CE3FE00B1F061 /* SnapshotTesting */; };
 		E9F349FE2C33F1D600333499 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = E9F349FD2C33F1D600333499 /* ViewInspector */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9F349FE2C33F1D600333499 /* ViewInspector in Frameworks */,
+				7814F2E52D2CE3FE00B1F061 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +139,7 @@
 			name = MastermindTests;
 			packageProductDependencies = (
 				E9F349FD2C33F1D600333499 /* ViewInspector */,
+				7814F2E42D2CE3FE00B1F061 /* SnapshotTesting */,
 			);
 			productName = MastermindTests;
 			productReference = E9F131792C33EB30007C5190 /* MastermindTests.xctest */;
@@ -172,6 +175,7 @@
 			mainGroup = E9F131602C33EB2F007C5190;
 			packageReferences = (
 				E9F349FC2C33F1D600333499 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+				7814F2E32D2CE3FE00B1F061 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = E9F1316A2C33EB2F007C5190 /* Products */;
 			projectDirPath = "";
@@ -474,6 +478,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7814F2E32D2CE3FE00B1F061 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.17.6;
+			};
+		};
 		E9F349FC2C33F1D600333499 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nalexn/ViewInspector";
@@ -485,6 +497,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7814F2E42D2CE3FE00B1F061 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7814F2E32D2CE3FE00B1F061 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
 		E9F349FD2C33F1D600333499 /* ViewInspector */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E9F349FC2C33F1D600333499 /* XCRemoteSwiftPackageReference "ViewInspector" */;
