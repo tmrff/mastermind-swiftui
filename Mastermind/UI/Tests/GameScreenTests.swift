@@ -67,7 +67,7 @@ final class GameScreenTests: XCTestCase {
         inspectChangingView(&sut) { view in
             try view.find(viewWithId: codeChoice1.codeValue).button().tap()
             try view.find(viewWithId: codeChoice2.codeValue).button().tap()
-            isEnabled = try self.checkButton(view).isResponsive()
+            isEnabled = try view.checkButton().isResponsive()
         }
         XCTAssertTrue(isEnabled)
     }
@@ -136,5 +136,11 @@ final class GameScreenTests: XCTestCase {
     
     private func checkButton<V>(_ view: InspectableView<V>) throws -> InspectableView<ViewType.Button> {
         try view.find(viewWithAccessibilityIdentifier: "checkButton").button()
+    }
+}
+
+extension InspectableView {
+    func checkButton() throws -> InspectableView<ViewType.Button> {
+        try find(viewWithAccessibilityIdentifier: "checkButton").button()
     }
 }
