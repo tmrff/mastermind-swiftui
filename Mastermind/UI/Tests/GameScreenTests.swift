@@ -29,7 +29,7 @@ final class GameScreenTests: XCTestCase {
         let game = try makeGame(numberOfCodeChoices: 2, secretSize: 1)
         let sut = GameScreen(game: game)
         
-        let color = try getColorOfGuess(try sut.inspect(), id: "guess1")
+        let color = try sut.inspect().colorOfGuess(id: "guess1")
         
         XCTAssertEqual(color, Color.unselected)
     }
@@ -44,8 +44,8 @@ final class GameScreenTests: XCTestCase {
         inspectChangingView(&sut) { view in
             try view.find(viewWithId: codeChoice1.codeValue).button().tap()
             try view.find(viewWithId: codeChoice2.codeValue).button().tap()
-            color1 = try self.getColorOfGuess(view, id: "guess1")
-            color2 = try self.getColorOfGuess(view, id: "guess2")
+            color1 = try view.colorOfGuess(id: "guess1")
+            color2 = try view.colorOfGuess(id: "guess2")
         }
         XCTAssertEqual(color1, codeChoice1.color)
         XCTAssertEqual(color2, codeChoice2.color)
@@ -125,10 +125,6 @@ final class GameScreenTests: XCTestCase {
         try Game(numberOfCodeChoices: numberOfCodeChoices, secretSize: secretSize, SecretMaker.createNull())
     }
     
-    private func getColorOfGuess<V>(_ view: InspectableView<V>, id: String) throws -> Color? {
-        try view.find(viewWithId: id).button().labelView().shape().foregroundColor()
-    }
-    
     private func checkButton<V>(_ view: InspectableView<V>) throws -> InspectableView<ViewType.Button> {
         try view.find(viewWithAccessibilityIdentifier: "checkButton").button()
     }
@@ -137,6 +133,10 @@ final class GameScreenTests: XCTestCase {
 private extension InspectableView {
     func checkButton() throws -> InspectableView<ViewType.Button> {
         try find(viewWithAccessibilityIdentifier: "checkButton").button()
+    }
+    
+    func colorOfGuess(id: String) throws -> Color? {
+        try find(viewWithId: id).button().labelView().shape().foregroundColor()
     }
     
     func codeChoiceColor(_ index: Int) throws -> Color? {
