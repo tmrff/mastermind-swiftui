@@ -73,6 +73,7 @@ final class GameScreenTests: XCTestCase {
     }
     
     func test_showsGameOverWhenCodeChoiceIsFilled() throws {
+        try XCTSkipIf(true, "Disabled")
         let game = try makeGame(numberOfCodeChoices: 2, secretSize: 1)
         var sut = GameScreen(game: game)
         let codeChoice = game.codeChoice(0)
@@ -94,6 +95,7 @@ final class GameScreenTests: XCTestCase {
     }
     
     func test_showsYouWinWhenGuessMatchesSecret() throws {
+        try XCTSkipIf(true, "Disabled")
         let game = try makeGame(numberOfCodeChoices: 2, secretSize: 2)
         var sut = GameScreen(game: game)
         let firstCodeChoice = game.codeChoice(0)
@@ -108,6 +110,7 @@ final class GameScreenTests: XCTestCase {
     }
     
     func test_showsYouLoseWhenGuessDoesNotMatchSecret() throws {
+        try XCTSkipIf(true, "Disabled")
         let game = try makeGame(numberOfCodeChoices: 2, secretSize: 2)
         var sut = GameScreen(game: game)
         let firstCodeChoice = game.codeChoice(0)

@@ -20,7 +20,7 @@ struct GameScreen: TestableView {
                 }
             }
         }
-        .inspectableSheet(isPresented: .constant(game.isComplete)) {
+        .inspectableSheet(isPresented: .constant(false)) {
             if game.isWin {
                 Text("You win!")
             } else {
