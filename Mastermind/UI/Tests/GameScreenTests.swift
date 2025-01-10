@@ -12,9 +12,9 @@ final class GameScreenTests: XCTestCase {
         let game = try makeGame(numberOfCodeChoices: 2, secretSize: 1)
         let sut = GameScreen(game: game)
         
-        let choice1 = try getCodeChoiceColor(sut.inspect(), 0)
-        let choice2 = try getCodeChoiceColor(sut.inspect(), 1)
-        
+         let choice1 = try sut.inspect().codeChoiceColor(0)
+         let choice2 = try sut.inspect().codeChoiceColor(1)
+         
         XCTAssertEqual(choice1, game.codeChoice(1).color)
         XCTAssertEqual(choice2, game.codeChoice(0).color)
     }
@@ -129,18 +129,18 @@ final class GameScreenTests: XCTestCase {
         try view.find(viewWithId: id).button().labelView().shape().foregroundColor()
     }
     
-    private func getCodeChoiceColor<V>(_ view: InspectableView<V>, _ index: Int) throws -> Color? {
-        let codeChoice = try view.find(viewWithAccessibilityIdentifier: "codeChoices").vStack(0).forEach(0)[index]
-        return try codeChoice.find(ViewType.Button.self).labelView().shape().overlay().shape().foregroundColor()
-    }
-    
     private func checkButton<V>(_ view: InspectableView<V>) throws -> InspectableView<ViewType.Button> {
         try view.find(viewWithAccessibilityIdentifier: "checkButton").button()
     }
 }
 
-extension InspectableView {
+private extension InspectableView {
     func checkButton() throws -> InspectableView<ViewType.Button> {
         try find(viewWithAccessibilityIdentifier: "checkButton").button()
+    }
+    
+    func codeChoiceColor(_ index: Int) throws -> Color? {
+        let codeChoice = try find(viewWithAccessibilityIdentifier: "codeChoices").vStack(0).forEach(0)[index]
+        return try codeChoice.find(ViewType.Button.self).labelView().shape().overlay().shape().foregroundColor()
     }
 }
