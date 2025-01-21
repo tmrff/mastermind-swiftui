@@ -23,6 +23,8 @@ jobs:
     - uses: actions/checkout@v4
     - name: List runner info
       run: sw_vers && arch
+    - name: List available Xcode versions
+      run: ls /Applications | grep Xcode
     - name: Show current version of Xcode
       run: xcodebuild -version
     - name: Run tests
