@@ -3,22 +3,22 @@ import XCTest
 
 final class GameTests: XCTestCase {
     func test_isObservable_soThatViewsCanObserveChanges() throws {
-        let game = try makeGame()
-        XCTAssertTrue(game is (any Observable))
+        let sut = try makeSUT()
+        XCTAssertTrue(sut is (any Observable))
     }
     
     func test_gameHasNoSecretInitially() throws {
-        let game = try makeGame()
-        XCTAssertEqual(game.secret.code, [])
+        let sut = try makeSUT()
+        XCTAssertEqual(sut.secret.code, [])
     }
     
     func test_makeNewSecret() throws {
-        let game = try makeGame()
-        game.makeNewSecret()
-        XCTAssertEqual(game.secret.code.first, game.codeChoices.options.first)
+        let sut = try makeSUT()
+        sut.makeNewSecret()
+        XCTAssertEqual(sut.secret.code.first, sut.codeChoices.options.first)
     }
     
-    private func makeGame() throws -> Game {
+    private func makeSUT() throws -> Game {
         try Game(numberOfCodeChoices: 2, secretSize: 2, SecretMaker.createNull())
     }
 }
