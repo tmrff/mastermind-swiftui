@@ -45,18 +45,16 @@ struct Secret: CustomStringConvertible {
 
 #if DEBUG
 extension Secret {
-    var testHooks: TestHooks { TestHooks(self) }
+    var testHooks: TestHooks { TestHooks(target: self) }
     
     struct TestHooks {
-        private let sut: Secret
+        private let target: Secret
         
-        init(_ sut: Secret) {
-            self.sut = sut
+        fileprivate init(target: Secret) {
+            self.target = target
         }
         
-        public var code: [CodeChoice] {
-            sut.code
-        }
+        var code: [CodeChoice] { target.code }
     }
 }
 #endif
