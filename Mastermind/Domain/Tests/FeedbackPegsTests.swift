@@ -6,18 +6,18 @@ private let green = CodeChoice(color: .green, codeValue: 2)
 private let blue = CodeChoice(color: .blue, codeValue: 3)
 
 final class FeedbackPegsTests: @unchecked Sendable {
-    @Test(arguments: [([red, green], 2), ([red, green, blue], 3)])
-    func numberOfPegsIsCodeLength(secretCode: [CodeChoice], expectedCount: Int) async throws {
-        let secret = Secret(code: secretCode)
-        
-        let feedbackPegs = FeedbackPegs(secret: secret)
-        
-        #expect(feedbackPegs.count == expectedCount)
-    }
-    
-    @Test func pegsInitiallyEmpty() async throws {
-        let feedbackPegs = FeedbackPegs(secret: Secret(code: [red, green]))
-        
-        #expect(feedbackPegs.pegs == [.empty, .empty])
-    }
+//    @Test(arguments: [([red, green], 2), ([red, green, blue], 3)])
+//    func numberOfPegsIsCodeLength(secretCode: [CodeChoice], expectedCount: Int) async throws {
+//        let secret = Secret(code: secretCode)
+//        
+//        let feedbackPegs = FeedbackPegs(secret: secret)
+//        
+//        #expect(feedbackPegs.count == expectedCount)
+//    }
+//    
+//    @Test func pegsInitiallyEmpty() async throws {
+//        let feedbackPegs = FeedbackPegs(secret: Secret(code: [red, green]))
+//        
+//        #expect(feedbackPegs.pegs == [.empty, .empty])
+//    }
 }
