@@ -6,6 +6,10 @@ struct FeedbackPegs {
     }
     
     var pegs: [FeedbackPeg] {
+        pegs(feedback: feedback)
+    }
+    
+    func pegs(feedback: Feedback) ->  [FeedbackPeg] {
         var result: [FeedbackPeg] = []
         result.append(contentsOf: Array.init(repeating: .correct, count: feedback.inCorrectPosition))
         result.append(contentsOf: Array.init(repeating: .misplaced, count: feedback.inWrongPosition))
@@ -15,7 +19,6 @@ struct FeedbackPegs {
                 count: feedback.totalCount - feedback.inCorrectPosition - feedback.inWrongPosition
             )
         )
-        
         return result
     }
 }
