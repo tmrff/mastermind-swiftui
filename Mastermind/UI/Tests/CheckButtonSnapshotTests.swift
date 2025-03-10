@@ -21,7 +21,7 @@ final class CheckButtonSnapshotTests: @unchecked Sendable {
         VStack {
             CheckButton().disabled(disabled)
         }
-        .frame(width: 100)
+        .frame(width: 50)
     }
     
     private func closeEnough() -> Snapshotting<UIViewController, UIImage> {
