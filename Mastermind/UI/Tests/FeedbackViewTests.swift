@@ -4,7 +4,11 @@ import XCTest
 
 @MainActor
 final class FeedbackViewTests: XCTestCase, Sendable {
-    
+    func test_pegs() throws {
+            let sut = FeedbackView(feedbackPegs: [.empty, .empty, .empty, .empty])
+
+            try sut.inspect().peg1()
+        }
 }
 
 private extension InspectableView {
