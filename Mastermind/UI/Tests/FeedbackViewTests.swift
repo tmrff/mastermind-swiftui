@@ -18,4 +18,8 @@ private extension InspectableView {
     func peg1Color() throws -> Color? {
         try find(viewWithAccessibilityIdentifier: "feedback1").shape().foregroundColor()
     }
+    
+    func pegColor(_ peg: Int) throws -> Color? {
+        try find(viewWithAccessibilityIdentifier: "feedback\(peg)").shape().foregroundColor()
+    }
 }
