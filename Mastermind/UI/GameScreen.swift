@@ -102,20 +102,3 @@ private extension CodeChoices {
 #Preview {
     GameScreen(game: try! Game(numberOfCodeChoices: 4, secretSize: 4, SecretMaker.createNull()))
 }
-
-struct FeedbackView: View {
-    let feedbackPegs: [FeedbackPeg]
-    
-    var body: some View {
-        Grid {
-            GridRow {
-                Circle().fill(Color.unselected).frame(width: 10, height: 10)
-                Circle().fill(Color.unselected).frame(width: 10, height: 10)
-            }
-            GridRow {
-                Circle().fill(Color.unselected).frame(width: 10, height: 10)
-                Circle().fill(Color.unselected).frame(width: 10, height: 10)
-            }
-        }
-    }
-}
