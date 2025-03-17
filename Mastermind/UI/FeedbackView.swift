@@ -23,16 +23,19 @@ struct FeedbackView: View {
                     .accessibilityIdentifier("feedback1")
                 Circle()
                     .foregroundColor(Color.unselected)
+                    .foregroundColor(feedbackColor(for: feedbackPegs[0]))
                     .frame(width: 10, height: 10)
                     .accessibilityIdentifier("feedback2")
             }
             GridRow {
                 Circle()
                     .foregroundColor(Color.unselected)
+                    .foregroundColor(feedbackColor(for: feedbackPegs[0]))
                     .frame(width: 10, height: 10)
                     .accessibilityIdentifier("feedback3")
                 Circle()
                     .foregroundColor(Color.unselected)
+                    .foregroundColor(feedbackColor(for: feedbackPegs[0]))
                     .frame(width: 10, height: 10)
                     .accessibilityIdentifier("feedback4")
             }
