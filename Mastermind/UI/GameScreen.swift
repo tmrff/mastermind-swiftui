@@ -7,8 +7,8 @@ struct GameScreen: TestableView {
     
     init(game: Game) {
         self.game = game
-        self.feedbackPegs = game.secret.initialFeedback().pegs
         game.makeNewSecret()
+        self.feedbackPegs = game.secret.initialFeedback().pegs
     }
     
     var body: some View {
