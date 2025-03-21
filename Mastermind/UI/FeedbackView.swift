@@ -6,9 +6,9 @@ struct FeedbackView: View {
     func feedbackColor(for peg: FeedbackPeg) -> Color {
         switch peg {
         case .empty:
-            return .unselected
+            return Color.Pegs.unselected
         case .correct:
-            return .purple
+            return .Pegs.correct
         case .misplaced:
             return .orange
         }
@@ -22,19 +22,19 @@ struct FeedbackView: View {
                     .frame(width: 10, height: 10)
                     .accessibilityIdentifier("feedback1")
                 Circle()
-                    .foregroundColor(Color.unselected)
+                    .foregroundColor(Color.Pegs.unselected)
                     .foregroundColor(feedbackColor(for: feedbackPegs[0]))
                     .frame(width: 10, height: 10)
                     .accessibilityIdentifier("feedback2")
             }
             GridRow {
                 Circle()
-                    .foregroundColor(Color.unselected)
+                    .foregroundColor(Color.Pegs.unselected)
                     .foregroundColor(feedbackColor(for: feedbackPegs[0]))
                     .frame(width: 10, height: 10)
                     .accessibilityIdentifier("feedback3")
                 Circle()
-                    .foregroundColor(Color.unselected)
+                    .foregroundColor(Color.Pegs.unselected)
                     .foregroundColor(feedbackColor(for: feedbackPegs[0]))
                     .frame(width: 10, height: 10)
                     .accessibilityIdentifier("feedback4")
